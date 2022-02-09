@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The following are needed for generating the DiVA page(s)
+\usepackage[force-eol=true]{scontents}              %% Needed to save lang, abstract, and keywords
+\usepackage{pgffor}                 %% includes the foreach loop
+
+%% Basic packages
+
+%% Links
+\usepackage{url}                %% Support for breaking URLs
+
+%% Colorize
+%\usepackage{color}
+\PassOptionsToPackage{dvipsnames, svgnames}{xcolor}
+\usepackage{xcolor}
+
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{xspace}
+\usepackage{braket}
+
+% to support units and decimal aligned columns in tables
+% the option loads the binary prefixes
+\usepackage[binary-units=true, locale=US]{siunitx}
+
+\usepackage{balance}
+\usepackage{stmaryrd}
+\usepackage{booktabs}
+\usepackage{graphicx}	        %% Support for images
+\usepackage{multirow}	        %% Support for multirow columns in tables
+\usepackage{tabularx}		    %% For simple table stretching
+\usepackage{mathtools}
+\usepackage{algorithm} 
+\usepackage{algorithmic}  
+\usepackage{amsmath}
+\usepackage[linesnumbered,ruled,vlined,algo2e]{algorithm2e}
+% can't use both algpseudocode and algorithmic packages
+%\usepackage[noend]{algpseudocode}
+%\usepackage{subfig}  %% cannot use both subcaption and subfig packages
+\usepackage{optidef}
+\usepackage{float}		        %% Support for more flexible floating box positioning
+\usepackage{pifont}
+
+%% some additional useful packages
+% to enable rotated figures
+\usepackage{rotating}	    	%% For text rotating
+\usepackage{array}		        %% For table wrapping
+\usepackage{mdwlist}            %% various list-related commands
+\usepackage{setspace}           %% For fine-grained control over line spacing
+
+
+\usepackage{enumitem}           %% to allow changes to the margins of descriptions
+
+
+%% If you are going to include source code (or code snippets)
+\usepackage{listings}		    %% For source code listing
+%%\usepackage[cache=false]{minted} %% For source code highlighting
+%%\usemintedstyle{borland}
+
+\usepackage{bytefield}          %% For packet drawings
+
+
+\setlength {\marginparwidth }{2cm} %leave some extra space for todo notes
+\usepackage{todonotes}
+\usepackage{notoccite} % do not number captions based on their appearance in the TOC
+
+
+% Footnotes
+\usepackage{perpage}
+\usepackage[perpage,para,symbol]{footmisc} %% use symbols to ``number'' footnotes and reset which symbol is used first on each page
+
+
+%% Various useful packages
+%%----------------------------------------------------------------------------
+%%   pcap2tex stuff
+%%----------------------------------------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,fit,positioning,calc,shapes}
+\usepackage{pgfmath}	% --math engine
+\newcommand\bmmax{2}
+\usepackage{bm} % bold math
+
+
+%% Managing titles
+% \usepackage[outermarks]{titlesec}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\captionsetup[subfloat]{listofformat=parens}
+
+% to include PDF pages
+%\usepackage{pdfpages}
+
+
+\usepackage{csquotes}               %% Recommended by biblatex
+% to provide a float barrier use:
+\usepackage{placeins}
+
+\usepackage{comment}  %% Provides a comment environment
+\usepackage{refcount}   %% to be able to get an expandable \getpagerefnumber
+
+
+

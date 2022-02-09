@@ -1,0 +1,61 @@
+{
+"Author1": {"Last name": "Student", "First name": "Fake A.", "Local User Id": "u100001", "E-mail": "a@kth.se", "organisation": {"L1": "School of Electrical Engineering and Computer Science" }},
+"Author2": {"Last name": "Student", "First name": "Fake B.", "Local User Id": "u100002", "E-mail": "b@kth.se", "organisation": {"L1": "School of Architecture and the Built Environment" }},
+"Cycle": "2", "Course code": "DA231X", "Credits": "30.0", 
+"Degree1": {"Educational program": "Degree Programme in Computer Science and Engineering","programcode": "CDATE" ,"Degree": "Degree of Master of Science in Engineering" ,"subjectArea": "Computer Science and Engineering" }, 
+"Title": {"Main title": "This is the title in the language of the thesis", "Subtitle": "An subtitle in the language of the thesis", "Language": "eng" }, "Alternative title": {"Main title": "Detta är den svenska översättningen av titeln", "Subtitle": "Detta är den svenska översättningen av undertiteln", "Language": "swe" }, 
+"Supervisor1": {"Last name": "Supervisor", "First name": "A. Busy", "Local User Id": "u100003", "E-mail": "sa@kth.se", "organisation": {"L1": "School of Electrical Engineering and Computer Science" ,"L2": "Computer Science" }}, 
+"Supervisor2": {"Last name": "Supervisor", "First name": "Another Busy", "Local User Id": "u100003", "E-mail": "sb@kth.se", "organisation": {"L1": "School of Architecture and the Built Environment" ,"L2": "Architecture" }}, 
+"Supervisor3": {"Last name": "Supervisor", "First name": "Third Busy", "E-mail": "sc@tu.va", "Other organisation": "Timbuktu University, Department of Pseudoscience" }, 
+"Examiner1": {"Last name": "Maguire Jr.", "First name": "Gerald Q.", "Local User Id": "u1d13i2c", "E-mail": "maguire@kth.se", "organisation": {"L1": "School of Electrical Engineering and Computer Science" ,"L2": "Computer Science" }}, 
+"Cooperation": {"Partner_name": "Företaget AB"}, 
+"National Subject Categories": "10201, 10206", 
+"Other information": {"Year": "2022", "Number of pages": "xix,35" }, 
+"Series": {"Title of series": "TRITA-EECS-EX" , "No. in series": "2021:00" }, 
+"Opponents": {"Name": "A. B. Normal \& A. X. E. Normalè"}, 
+"Presentation": {"Date": "2021-03-15 13:00" ,"Language": "eng" ,"Room": "via Zoom https://kth-se.zoom.us/j/ddddddddddd" ,"Address": "Isafjordsgatan 22 (Kistagången 16)" ,"City": "Stockholm" }, 
+"Number of lang instances": "2",
+"abstracts": {
+"eng": €€€€
+"\todo[inline, backgroundcolor=kth-lightgreen]{All theses at KTH are \textbf{required} to have an abstract in both \textit{English} and \textit{Swedish}.}
+
+\todo[inline, backgroundcolor=kth-lightgreen]{Exchange students many want to include one or more abstracts in the language(s) used in their home institutions to avoid the need to write another thesis when returning to their home institution.}
+
+\todo[inline]{Keep in mind that most of your potential readers are only going to read your \texttt{title} and \texttt{abstract}. This is why it is important that the abstract give them enough information that they can decide is this document relevant to them or not. Otherwise the likely default choice is to ignore the rest of your document.\\
+
+A abstract should stand on its own, i.e., no citations, cross references to the body of the document, acronyms must be spelled out, \ldots .\\
+
+Write this early and revise as necessary. This will help keep you focused on what you are trying to do.}
+
+Write an abstract that is about 250 and 350 words (1/2 A4-page)  with the following components:: % key parts of the abstract
+\begin{itemize}
+  \item What is the topic area? (optional) Introduces the subject area for the project.
+  \item Short problem statement
+  \item Why was this problem worth a Bachelor's/Master’s thesis project? (\ie, why is the problem both significant and of a suitable degree of difficulty for a Bachelor's/Master’s thesis project? Why has no one else solved it yet?)
+  \item How did you solve the problem? What was your method/insight?
+  \item Results/Conclusions/Consequences/Impact: What are your key results/\linebreak[4]conclusions? What will others do based upon your results? What can be done now that you have finished - that could not be done before your thesis project was completed?
+\end{itemize}"
+€€€€,
+"swe": €€€€
+"\todo[inline, backgroundcolor=kth-lightblue]{Alla avhandlingar vid KTH \textbf{måste ha} ett abstrakt på både \textit{engelska} och \textit{svenska}.\\
+Om du skriver din avhandling på svenska ska detta göras först (och placera det som det första abstraktet) - och du bör revidera det vid behov.}
+
+\todo[inline]{If you are writing your thesis in English, you can leave this until the draft version that goes to your opponent for the written opposition. In this way you can provide the English and Swedish abstract/summary information that can be used in the announcement for your oral presentation.\\
+
+If you are writing your thesis in English, then this section can be a summary targeted at a more general reader. However, if you are writing your thesis in Swedish, then the reverse is true – your abstract should be for your target audience, while an English summary can be written targeted at a more general audience.\\
+
+This means that the English abstract and Swedish sammnfattning
+or Swedish abstract and English summary need not be literal translations of each other.}
+
+\todo[inline, backgroundcolor=kth-lightgreen]{The abstract in the language used for the thesis should be the first abstract, while the Summary/Sammanfattning in the other language can follow}"
+€€€€,
+},
+"keywords": {
+"eng": €€€€
+" Keyword 1, Keyword 2, Keyword3"
+€€€€,
+"swe": €€€€
+" Nyckelord 1, Nyckelord 2, Nyckelord 3"
+€€€€,
+}
+}
