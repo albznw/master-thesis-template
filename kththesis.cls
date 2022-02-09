@@ -375,6 +375,206 @@
 %\let\@kthcover\@empty
 %\newcommand{\kthcover}[1]{\def\@kthcover{#1}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KTH COVER
+
+% for new KTH cover
+% Load the Arial font as it is used for the KTH covers
+% 
+\ifluatex
+\newfontfamily\coverlfont[Ligatures=TeX]{Arial}
+    
+\newfontfamily\coverbfont[Ligatures=TeX]{Arial Bold}
+\else
+\ifxetex
+\newfontfamily\coverlfont[Mapping=tex-text]{Arial}
+    
+\newfontfamily\coverbfont[Mapping=tex-text]{Arial Bold}
+%\newfontfamily\coversbfont[Mapping=tex-text]{Arial Medium}
+\else
+\newcommand\coverlfont{\fontfamily{helvet}\selectfont\sffamily}
+\newcommand\coverbfont{\fontfamily{helvet}\selectfont\sffamily\bfseries}
+\fi
+\fi
+% For information about the page layout see https://www.overleaf.com/learn/latex/Page_size_and_margins
+\newcommand{\kthcover}{
+% Note that the values have only been adjusted for A4 paper!
+\ifgfivepaper
+  \newgeometry{top=65mm,bottom=30mm,left=62mm,right=18mm}
+\else
+  \newgeometry{top=56mm,bottom=30mm,left=74pt, right=35mm} % formerly {top=56mm,bottom=30mm,left=74pt, right=35mm}
+\fi
+
+\thispagestyle{empty}
+
+% Note that the English cover has additional text on it, sop generate it
+\ifinswedish
+\null
+\else
+\begin{textblock*}{100pt}(451.559pt, 33.88pt) % {block width} (coords) - formerly 481.748pt, 28pt
+\includegraphics{lib/KTH_ROYAL_INSTITUTE_OF_TECHNOLOGY_logotype.png} % formerly width=76.2pt, height=76.2pt
+%\noindent{\fontsize{9.5}{10}\coverbfont
+%    \textcolor{black}{KTH ROYAL INSTITUTE} % formerly     \textcolor{black!80!}{KTH ROYAL INSTITUTE}
+%}
+\end{textblock*}
+%\begin{textblock*}{85pt}(451.559pt, 44.22pt) % {block width} (coords) -formerly 481.748pt, 38pt
+%\noindent{\fontsize{9.5}{10}\coverbfont
+%    \textcolor{black}{OF TECHNOLOGY}
+%}
+%\end{textblock*}
+\fi
+
+\begin{textblock*}{72.85pt}(20pt, 33.88pt) % formerly 20pt, 40pt
+\includegraphics[width=72.85pt, height=72.85pt, keepaspectratio]{lib/kth_logo.png} % formerly width=76.2pt, height=76.2pt
+\end{textblock*}
+\begin{flushleft}
+
+{\coverlfont \fontsize{12}{13}
+  \ifinswedish
+  Examensarbete inom \@subjectArea\\
+  \addvspace{8pt}
+  \IfEqCase{\@courseCycle}{%
+    {1}{Grundnivå,}%
+    {2}{Avancerad nivå,}%
+  }[\typeout{unknown cycle}]
+~\IfEqCase{\@courseCredits}{%
+    {5.0}{5}%
+    {7.5}{7,5}%
+    {10.0}{10}%
+    {12.0}{12}%
+    {14.0}{14}%
+    {15.0}{15}%
+    {16.0}{16}%
+    {18.0}{18}%
+    {20.0}{20}%
+    {22.5}{22,5}%
+    {28.0}{28}%
+    {30.0}{30}%
+    {35.0}{33}%
+    {37.5}{37,5}%
+    {45.0}{45}%
+    {60.0}{60}%
+    {90.0}{90}%
+    {120.0}{120}%
+    {180.0}{180}%
+    {210.0}{210}%
+    {240.0}{240}%
+    {300.0}{300}%
+    {330.0}{330}%
+    }[\typeout{unknown credits}]%
+~hp\\
+  \else
+  Degree Project in \@subjectArea\\
+  \addvspace{8pt}
+  \IfEqCase{\@courseCycle}{%
+    {1}{First cycle,}%
+    {2}{Second cycle,}%
+  }[\typeout{unknown cycle}]
+\,\IfEqCase{\@courseCredits}{%
+    {5.0}{5}%
+    {7.5}{7.5}%
+    {10.0}{10}%
+    {12.0}{12}%
+    {14.0}{14}%
+    {15.0}{15}%
+    {16.0}{16}%
+    {18.0}{18}%
+    {20.0}{20}%
+    {22.5}{22.5}%
+    {28.0}{28}%
+    {30.0}{30}%
+    {35.0}{33}%
+    {37.5}{37.5}%
+    {45.0}{45}%
+    {60.0}{60}%
+    {90.0}{90}%
+    {120.0}{120}%
+    {180.0}{180}%
+    {210.0}{210}%
+    {240.0}{240}%
+    {300.0}{300}%
+    {330.0}{330}%
+    }[\typeout{unknown credits}]%
+~credits\\
+  \fi
+    
+}
+\addvspace{40pt}
+{\fontsize{26}{30}\coverbfont \@title \par }
+
+
+\ifx\@subtitle\@empty\relax
+\else
+\addvspace{12pt}
+    {\fontsize{16}{18}\coverlfont  \@subtitle \par }
+\fi
+
+\addvspace{30pt}
+    {\fontsize{12}{13}\coverbfont
+    \expandafter\MakeUppercase\expandafter\@authorsFirstname\space\expandafter\MakeUppercase\expandafter\@authorsLastname \par
+    \ifx\@secondAuthorsLastname\@empty\relax
+    \else\addvspace{2pt}\expandafter\MakeUppercase\expandafter\@secondAuthorsFirstname\space\expandafter\MakeUppercase\expandafter\@secondAuthorsLastname \par
+    \fi
+    }
+\end{flushleft}
+\vfill
+\begin{textblock*}{510pt}(38.83pt, {\paperheight - 46pt}) % {block width} (coords) 
+\ifinswedish
+\noindent{\fontsize{8}{10}\coverlfont Stockholm, Sverige, \the\year{}}\\
+  \else
+\noindent{\fontsize{8}{10}\coverlfont Stockholm, Sweden, \the\year{}}\\
+  \fi
+\end{textblock*}
+\begin{textblock*}{510pt}(37.7pt, {\paperheight - 34pt}) % {block width} (coords) 
+%\vspace*{-22pt}
+\begin{tikzpicture}
+\draw[kth-blue, line width=1.0 pt] (0pt,0pt) -- (510pt,0pt);
+\end{tikzpicture}
+\end{textblock*}
+\restoregeometry
+\clearpage
+}
+
+\newcommand{\kthbackcover}{
+% Note that the values have only been adjusted for A4 paper!
+\ifgfivepaper
+  \newgeometry{top=65mm,bottom=30mm,left=62mm,right=18mm}
+\else
+  \newgeometry{top=65mm,bottom=30mm,left=74pt, right=35mm}
+\fi
+
+\thispagestyle{empty}
+
+% Generate the back cover with the TRITA number and the fixed graphical elements
+\begin{textblock*}{5cm}(38.83pt, {\paperheight - 72pt}) % {block width} (coords) 
+\noindent{\fontsize{10}{12}\coverlfont 
+    \ifx\@thesisSeries\@empty %\relax
+        TRITA xxxx:yyy
+        \else
+        	\@thesisSeries-
+        	\ifx\@thesisSeriesNumber\@empty\relax
+            \else
+            \@thesisSeriesNumber
+             \fi
+    \fi\\
+}
+\end{textblock*}
+\begin{textblock*}{5cm}(38.83pt, {\paperheight - 44pt}) % {block width} (coords)  - was 44pt
+\noindent{\fontsize{8}{9}\coverlfont
+    \textcolor{kth-blue}{www.kth.se}
+}
+\end{textblock*}
+\begin{textblock*}{510pt}(19pt, {\paperheight - 34pt}) % {block width} (coords) - was 24.634pt
+%\vspace*{-22pt}
+\begin{tikzpicture}
+\draw[kth-blue, line width=1.0 pt] (0pt,0pt) -- (510pt,0pt);
+\end{tikzpicture}
+\end{textblock*}
+\restoregeometry
+\null\newpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% KTH COVER
+
 % Command to print out the standardized title page
 \renewcommand{\titlepage}{
 \ifgfivepaper
